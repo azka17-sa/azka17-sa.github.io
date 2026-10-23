@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f4f8f5">
+<title>SehatYuk — Atur Hidup Sehat</title>
+<style>
+:root{--bg:#f4f8f5;--card:#fff;--ink:#20352e;--muted:#72847b;--green:#237a57;--mint:#dff4e8;--lime:#c9f36b;--orange:#ffb86b;--blue:#dceeff;--pink:#ffe5e6;--line:#e6eee8;--shadow:0 12px 35px #244a3510}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer;border:0}.app{max-width:1180px;margin:auto;padding:24px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;font-size:22px;letter-spacing:-.6px}.logo{height:46px;width:46px;border-radius:16px;background:var(--green);color:white;display:grid;place-items:center;font-size:25px;box-shadow:0 7px 18px #237a5730}.date-pill{background:white;border:1px solid var(--line);padding:11px 15px;border-radius:14px;color:var(--muted);font-size:13px}.hero{background:linear-gradient(120deg,#174e3b,#237a57 68%,#4d9e70);color:white;border-radius:28px;padding:30px;display:grid;grid-template-columns:1.4fr .6fr;align-items:center;gap:20px;box-shadow:0 18px 40px #1d6b4925;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:260px;height:260px;border:45px solid #ffffff12;border-radius:50%;right:8%;top:-100px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.6px;color:#c9f36b;font-weight:800}.hero h1{font-size:clamp(28px,4vw,43px);line-height:1.08;letter-spacing:-1.5px;margin:12px 0}.hero p{color:#d5e9de;max-width:510px;line-height:1.6;margin:0}.hero-emoji{font-size:104px;text-align:center;filter:drop-shadow(0 12px 10px #082f1c30);z-index:1}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{padding:11px 16px;border-radius:12px;font-weight:750;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn-lime{background:var(--lime);color:#1d432f}.btn-glass{background:#ffffff1c;color:white;border:1px solid #ffffff35}.btn-green{background:var(--green);color:white}.btn-soft{background:#eef6f0;color:var(--green)}.btn-danger{background:#fff0f0;color:#a93b3b}.section-head{display:flex;align-items:end;justify-content:space-between;margin:30px 2px 14px;gap:12px}.section-head h2{margin:0;font-size:21px;letter-spacing:-.5px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:19px;box-shadow:var(--shadow)}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}.stat-icon{height:38px;width:38px;display:grid;place-items:center;border-radius:13px;font-size:20px}.stat strong{display:block;font-size:27px;margin:13px 0 4px;letter-spacing:-1px}.stat small{color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card-title{display:flex;align-items:center;gap:12px;margin-bottom:17px}.card-title .ico{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;font-size:22px}.card-title h3{margin:0;font-size:17px}.card-title p{margin:4px 0 0;font-size:12px;color:var(--muted)}.schedule-list{display:grid;gap:10px}.schedule-item{display:flex;align-items:center;gap:12px;padding:12px;background:#f8faf8;border:1px solid #edf2ed;border-radius:14px}.time{font-weight:850;font-size:15px;min-width:60px}.item-main{flex:1;min-width:0}.item-main strong{font-size:13px;display:block}.item-main span{color:var(--muted);font-size:12px}.item-actions{display:flex;gap:6px}.icon-btn{background:white;border:1px solid var(--line);height:32px;width:32px;border-radius:10px;color:var(--muted)}.icon-btn:hover{color:var(--green)}.add-row{display:flex;gap:8px;margin-top:13px}.add-row input,.add-row select,.form-row input,.form-row select{min-width:0;width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:11px;background:white;color:var(--ink);outline-color:#79b897}.add-row button{white-space:nowrap}.wellness{display:grid;grid-template-columns:1fr 1fr;gap:16px}.quit-card{background:linear-gradient(140deg,#fff6e9,#fff);border-color:#f7e8d4}.phone-card{background:linear-gradient(140deg,#edf5ff,#fff);border-color:#dceaff}.feature-top{display:flex;justify-content:space-between;align-items:start;gap:10px}.feature-top h3{margin:0;font-size:19px}.feature-top p{font-size:13px;color:var(--muted);line-height:1.55}.big-icon{font-size:38px}.metric{font-size:32px;font-weight:850;letter-spacing:-1px;margin:14px 0 3px}.muted{color:var(--muted);font-size:12px}.form-row{display:flex;gap:8px;margin-top:13px}.form-row>*{flex:1}.progress{height:9px;border-radius:20px;background:#e8eee9;overflow:hidden;margin:13px 0}.progress span{display:block;height:100%;width:0;background:var(--green);border-radius:20px;transition:width .3s}.quote{padding:14px;background:#fff;border:1px solid #f3e4cf;border-radius:13px;font-size:13px;line-height:1.5;margin-top:14px}.phone-card .progress span{background:#5086c8}.phone-card .quote{border-color:#dbe9fa}.bottom-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}.habit-row{display:flex;align-items:center;gap:12px;margin:13px 0}.habit-row label{flex:1;font-size:14px}.habit-row input{accent-color:var(--green);width:18px;height:18px}.habit-row small{color:var(--muted)}.empty{text-align:center;padding:20px;color:var(--muted);font-size:13px}.alarm-list{display:grid;gap:9px}.alarm-item{display:flex;gap:10px;align-items:center;background:#f8faf8;padding:12px;border-radius:13px}.alarm-item .alarm-text{flex:1}.alarm-item strong{display:block;font-size:13px}.alarm-item small{color:var(--muted)}.toggle{width:42px;height:24px;background:#d9e2dc;border-radius:30px;position:relative;flex-shrink:0}.toggle:after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:white;top:3px;left:3px;transition:.2s;box-shadow:0 1px 4px #0002}.toggle.on{background:var(--green)}.toggle.on:after{left:21px}.footer{text-align:center;color:#91a198;font-size:12px;padding:30px 10px 12px;line-height:1.6}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:#193f30;color:white;padding:13px 18px;border-radius:14px;box-shadow:0 12px 30px #0002;opacity:0;pointer-events:none;transition:.25s;z-index:9;font-size:13px;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.modal-backdrop{position:fixed;inset:0;background:#10251db3;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal-backdrop.show{display:flex}.modal{background:white;border-radius:22px;padding:23px;width:min(430px,100%);box-shadow:0 25px 70px #0003}.modal h3{margin:0 0 6px}.modal p{font-size:13px;color:var(--muted);line-height:1.5}.modal label{display:block;font-size:12px;font-weight:700;margin:12px 0 6px}.modal input,.modal select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.ring{width:112px;height:112px;border-radius:50%;border:8px solid #dff4e8;display:grid;place-items:center;margin:16px auto;font-size:28px;font-weight:850;color:var(--green)}@media(max-width:760px){.app{padding:14px}.hero{padding:23px;grid-template-columns:1fr}.hero-emoji{display:none}.stats{grid-template-columns:repeat(2,1fr);gap:10px}.stat{padding:15px}.grid,.wellness,.bottom-grid{grid-template-columns:1fr}.date-pill{font-size:11px;padding:9px}.brand{font-size:19px}.section-head{margin-top:25px}.add-row{flex-wrap:wrap}.add-row input{flex:1 1 42%}.add-row button{flex:1}.schedule-item{gap:8px}.time{min-width:52px}.item-actions{gap:3px}.icon-btn{height:30px;width:30px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="logo">✳</div><span>Sehat<span style="color:var(--green)">Yuk</span></span></div>
+    <div class="date-pill" id="todayLabel">Hari ini</div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">LANGKAH KECIL, HIDUP LEBIH BAIK</div>
+      <h1>Rawat dirimu.<br>Jalani harimu. 🌿</h1>
+      <p>Atur jadwal makan, tidur, olahraga, dan waktu layar dalam satu tempat. Kebiasaan baik dimulai dari hari ini.</p>
+      <div class="hero-actions"><button class="btn btn-lime" id="enableNotify">🔔 Aktifkan pengingat</button><button class="btn btn-glass" id="scrollSchedule">Lihat jadwal ↓</button></div>
+    </div>
+    <div class="hero-emoji" aria-hidden="true">🌱</div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><div class="stat-top">Jadwal hari ini <span class="stat-icon" style="background:var(--mint)">🗓️</span></div><strong id="statSchedules">6</strong><small>pengingat terencana</small></div>
+    <div class="stat"><div class="stat-top">Target tidur <span class="stat-icon" style="background:#e9e5ff">🌙</span></div><strong>8 jam</strong><small>usahakan konsisten</small></div>
+    <div class="stat"><div class="stat-top">Gerak aktif <span class="stat-icon" style="background:#fff0db">🏃</span></div><strong>30 mnt</strong><small>target aktivitas harian</small></div>
+    <div class="stat"><div class="stat-top">Waktu layar <span class="stat-icon" style="background:var(--blue)">📱</span></div><strong id="statScreen">2 jam</strong><small>target harianmu</small></div>
+  </section>
+
+  <div class="section-head" id="scheduleSection"><div><h2>Rutinitas harian</h2><p>Sesuaikan waktu agar cocok dengan kegiatanmu.</p></div></div>
+  <section class="grid">
+    <article class="card">
+      <div class="card-title"><div class="ico" style="background:#fff0d9">🍽️</div><div><h3>Jadwal makan</h3><p>Isi energi secara teratur</p></div></div>
+      <div class="schedule-list" id="mealList"></div>
+      <form class="add-row" id="mealForm"><input aria-label="Waktu makan" type="time" id="mealTime" value="15:30" required><input aria-label="Nama makan" id="mealName" placeholder="Contoh: Camilan sehat" required><button class="btn btn-soft" type="submit">＋ Tambah</button></form>
+    </article>
+    <article class="card">
+      <div class="card-title"><div class="ico" style="background:#e9e5ff">🌙</div><div><h3>Jadwal tidur</h3><p>Bangun dan tidur lebih teratur</p></div></div>
+      <div class="schedule-list" id="sleepList"></div>
+      <form class="add-row" id="sleepForm"><input aria-label="Waktu tidur" type="time" id="sleepTime" value="21:30" required><input aria-label="Nama jadwal tidur" id="sleepName" placeholder="Contoh: Mulai bersiap tidur" required><button class="btn btn-soft" type="submit">＋ Tambah</button></form>
+    </article>
+    <article class="card">
+      <div class="card-title"><div class="ico" style="background:#dff4e8">🏃</div><div><h3>Jadwal olahraga</h3><p>Mulai ringan, lakukan konsisten</p></div></div>
+      <div class="schedule-list" id="exerciseList"></div>
+      <form class="add-row" id="exerciseForm"><input aria-label="Waktu olahraga" type="time" id="exerciseTime" value="16:30" required><input aria-label="Nama olahraga" id="exerciseName" placeholder="Contoh: Jalan kaki 20 menit" required><button class="btn btn-soft" type="submit">＋ Tambah</button></form>
+    </article>
+    <article class="card">
+      <div class="card-title"><div class="ico" style="background:#dceeff">⏰</div><div><h3>Pengingat & alarm</h3><p>Aktifkan pengingat untuk jadwal pilihan</p></div></div>
+      <div class="alarm-list" id="alarmList"></div>
+      <p class="muted" style="line-height:1.6;margin:14px 0 0">Agar pengingat berbunyi, izinkan notifikasi jika tersedia dan biarkan halaman ini tetap terbuka. Browser tidak bisa menjamin alarm berjalan saat halaman ditutup atau perangkat tidur.</p>
+    </article>
+  </section>
+
+  <div class="section-head"><div><h2>Bangun kebiasaan baik</h2><p>Progres kecil tetap berarti. Tidak perlu sempurna setiap hari.</p></div></div>
+  <section class="wellness">
+    <article class="card quit-card">
+      <div class="feature-top"><div><h3>🚭 Perjalanan berhenti merokok</h3><p>Kenali pemicu, alihkan keinginan, dan rayakan setiap kemajuan.</p></div><div class="big-icon">🌤️</div></div>
+      <div class="metric" id="quitDays">Hari ke-0</div><div class="muted" id="quitSub">Mulai perjalanan bebas rokokmu hari ini.</div>
+      <div class="progress"><span id="quitProgress"></span></div>
+      <div class="form-row"><input type="date" id="quitDate" aria-label="Tanggal mulai berhenti merokok"><button class="btn btn-green" id="saveQuit">Simpan tanggal</button></div>
+      <div class="quote" id="cravingTip">💡 Saat keinginan muncul, coba tunda 5 menit, minum air, tarik napas perlahan, atau berjalan sebentar. Keinginan biasanya datang dan pergi.</div>
+      <button class="btn btn-soft" style="margin-top:12px" id="cravingBtn">🫁 Mulai jeda 2 menit</button>
+    </article>
+    <article class="card phone-card">
+      <div class="feature-top"><div><h3>📱 Atur waktu bermain HP</h3><p>Tentukan batas penggunaan dan gunakan timer saat mulai bermain.</p></div><div class="big-icon">⏳</div></div>
+      <div class="metric" id="screenRemaining">2 jam tersisa</div><div class="muted" id="screenUsed">Timer sesi belum dimulai hari ini.</div>
+      <div class="progress"><span id="screenProgress"></span></div>
+      <div class="form-row"><select id="screenLimit" aria-label="Batas waktu layar"><option value="60">1 jam per hari</option><option value="120" selected>2 jam per hari</option><option value="180">3 jam per hari</option><option value="240">4 jam per hari</option></select><button class="btn btn-green" id="saveScreenLimit">Atur batas</button></div>
+      <div class="form-row"><select id="sessionLength" aria-label="Durasi timer"><option value="15">15 menit</option><option value="30" selected>30 menit</option><option value="45">45 menit</option><option value="60">60 menit</option></select><button class="btn btn-soft" id="startScreenTimer">▶ Mulai timer</button></div>
+      <div class="quote" id="screenTimerStatus">Timer menghitung waktu sesi saat halaman ini terbuka. Fitur ini tidak dapat memantau pemakaian aplikasi lain di HP.</div>
+    </article>
+  </section>
+
+  <div class="bottom-grid">
+    <article class="card">
+      <div class="card-title"><div class="ico" style="background:#f0f5e5">✅</div><div><h3>Checklist sehat hari ini</h3><p>Centang saat selesai — tersimpan di perangkat ini.</p></div></div>
+      <div id="habitList"></div>
+      <div class="progress"><span id="habitProgress"></span></div><div class="muted" id="habitCount">0 dari 5 kebiasaan selesai</div>
+    </article>
+    <article class="card">
+      <div class="card-title"><div class="ico" style="background:#ffe5e6">💗</div><div><h3>Catatan untuk diri sendiri</h3><p>Tulis satu hal baik yang ingin kamu lakukan.</p></div></div>
+      <textarea id="dailyNote" rows="4" placeholder="Contoh: Hari ini aku akan berjalan kaki setelah pulang sekolah..." style="width:100%;resize:vertical;border:1px solid var(--line);border-radius:13px;padding:13px;font:inherit;outline-color:#79b897"></textarea>
+      <button class="btn btn-green" id="saveNote" style="margin-top:10px">Simpan catatan</button>
+    </article>
+  </div>
+  <footer class="footer">SehatYuk • Kebiasaan sehat dibangun sedikit demi sedikit.<br>Data disimpan di browser perangkat ini. Bukan pengganti saran tenaga kesehatan.</footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-backdrop" id="cravingModal" role="dialog" aria-modal="true" aria-labelledby="cravingTitle">
+  <div class="modal"><h3 id="cravingTitle">Jeda sejenak 🫁</h3><p>Fokus pada napas dan beri dirimu waktu. Tarik napas nyaman, lalu hembuskan perlahan. Tidak perlu dipaksakan.</p><div class="ring" id="breathRing">02:00</div><p id="breathHint" style="text-align:center">Tarik napas perlahan, lalu hembuskan.</p><div class="modal-actions"><button class="btn btn-soft" id="closeCraving">Tutup</button><button class="btn btn-green" id="restartBreath">Ulangi</button></div></div>
+</div>
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const today = new Date();
+const dateKey = today.toLocaleDateString('sv-SE');
+$('todayLabel').textContent = today.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+const defaults = {
+ meal:[{time:'07:00',name:'Sarapan'},{time:'12:30',name:'Makan siang'},{time:'19:00',name:'Makan malam'}],
+ sleep:[{time:'21:30',name:'Mulai bersiap tidur'},{time:'05:30',name:'Bangun pagi'}],
+ exercise:[{time:'06:00',name:'Peregangan 10 menit'},{time:'16:30',name:'Jalan kaki / olahraga 30 menit'}]
+};
+function load(key, fallback){try{const v=JSON.parse(localStorage.getItem('sehatyuk_'+key));return v===null?fallback:v}catch(e){return fallback}}
+function save(key,val){try{localStorage.setItem('sehatyuk_'+key,JSON.stringify(val))}catch(e){}}
+let schedules=load('schedules',defaults);
+let alarms=load('alarms',{'meal-0':true,'meal-1':true,'meal-2':true,'sleep-0':true,'sleep-1':true,'exercise-0':true,'exercise-1':true});
+let habits=load('habits_'+dateKey,[false,false,false,false,false]);
+let quitDate=load('quitDate','');
+let screenLimit=Number(load('screenLimit',120));
+let screenUsage=load('screenUsage_'+dateKey,{seconds:0});
+let sessionEnd=0, sessionInterval=null, breathInterval=null, breathSeconds=120, fired=new Set();
+const habitNames=['Minum air secara teratur','Makan teratur hari ini','Bergerak / olahraga','Kurangi waktu layar','Mulai bersiap tidur tepat waktu'];
+const icons={meal:'🍽️',sleep:'🌙',exercise:'🏃'};
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>$('toast').classList.remove('show'),2800)}
+function renderSchedules(){
+ ['meal','sleep','exercise'].forEach(type=>{
+  const list=$(type+'List'); list.innerHTML='';
+  schedules[type].sort((a,b)=>a.time.localeCompare(b.time)).forEach((item,i)=>{
+   const key=type+'-'+i;
+   const row=document.createElement('div');row.className='schedule-item';
+   row.innerHTML=`<div class="time">${esc(item.time)}</div><div class="item-main"><strong>${esc(item.name)}</strong><span>${type==='meal'?'Waktu makan':type==='sleep'?'Istirahat':'Aktivitas fisik'}</span></div><div class="item-actions"><button class="icon-btn" title="Ubah jadwal" aria-label="Ubah jadwal" data-edit="${type}:${i}">✎</button><button class="icon-btn" title="Hapus jadwal" aria-label="Hapus jadwal" data-delete="${type}:${i}">×</button></div>`;
+   list.appendChild(row);
+  });
+  if(!schedules[type].length)list.innerHTML='<div class="empty">Belum ada jadwal. Tambahkan di bawah.</div>';
+ });
+ renderAlarms();
+ $('statSchedules').textContent=Object.values(schedules).reduce((n,a)=>n+a.length,0);
+}
+function renderAlarms(){
+ const list=$('alarmList');list.innerHTML='';
+ Object.keys(schedules).forEach(type=>schedules[type].forEach((item,i)=>{
+  const key=type+'-'+i;const on=alarms[key]!==false;
+  const row=document.createElement('div');row.className='alarm-item';
+  row.innerHTML=`<div style="font-size:21px">${icons[type]}</div><div class="alarm-text"><strong>${esc(item.time)} · ${esc(item.name)}</strong><small>${on?'Pengingat aktif':'Pengingat nonaktif'}</small></div><button class="toggle ${on?'on':''}" role="switch" aria-checked="${on}" aria-label="Aktifkan pengingat ${esc(item.name)}" data-alarm="${key}"></button>`;
+  list.appendChild(row);
+ }));
+}
+document.addEventListener('click',e=>{
+ const del=e.target.closest('[data-delete]');if(del){const [type,i]=del.dataset.delete.split(':');schedules[type].splice(+i,1);save('schedules',schedules);alarms={};save('alarms',alarms);renderSchedules();toast('Jadwal dihapus.');}
+ const edit=e.target.closest('[data-edit]');if(edit){const [type,i]=edit.dataset.edit.split(':');const item=schedules[type][+i];const nt=prompt('Ubah waktu (HH:MM):',item.time);if(nt===null)return;if(!/^([01]\d|2[0-3]):[0-5]\d$/.test(nt)){toast('Format waktu harus HH:MM.');return}const nn=prompt('Ubah nama kegiatan:',item.name);if(nn===null)return;if(!nn.trim()){toast('Nama kegiatan tidak boleh kosong.');return}item.time=nt;item.name=nn.trim();save('schedules',schedules);renderSchedules();toast('Jadwal diperbarui.');}
+ const tog=e.target.closest('[data-alarm]');if(tog){alarms[tog.dataset.alarm]=alarms[tog.dataset.alarm]===false;save('alarms',alarms);renderAlarms();toast(alarms[tog.dataset.alarm]?'Pengingat diaktifkan.':'Pengingat dimatikan.');}
+});
+['meal','sleep','exercise'].forEach(type=>{
+ $(type+'Form').addEventListener('submit',e=>{e.preventDefault();const time=$(type+'Time').value,name=$(type+'Name').value.trim();if(!time||!name)return;schedules[type].push({time,name});save('schedules',schedules);$(type+'Name').value='';renderSchedules();toast('Jadwal berhasil ditambahkan.');});
+});
+$('enableNotify').addEventListener('click',async()=>{
+ if(!('Notification'in window)){toast('Browser ini tidak mendukung notifikasi.');return}
+ try{const p=await Notification.requestPermission();toast(p==='granted'?'Notifikasi diizinkan. Biarkan halaman tetap terbuka.': 'Izin notifikasi belum diberikan.');}catch(e){toast('Notifikasi tidak tersedia di browser ini.')}
+});
+$('scrollSchedule').onclick=()=>$('scheduleSection').scrollIntoView({behavior:'smooth'});
+function checkAlarms(){
+ const now=new Date();const hhmm=now.toTimeString().slice(0,5);const minuteKey=dateKey+'-'+hhmm;
+ Object.keys(schedules).forEach(type=>schedules[type].forEach((item,i)=>{
+  const key=type+'-'+i;
+  if(item.time===hhmm&&alarms[key]!==false&&!fired.has(minuteKey+'-'+key)){
+   fired.add(minuteKey+'-'+key);
+   const msg=type==='meal'?'Waktunya makan: ':'sleep'.includes(type)?'Waktunya istirahat: ':'Saatnya bergerak: ';
+   if('Notification'in window&&Notification.permission==='granted'){try{new Notification('SehatYuk 🌿',{body:msg+item.name,tag:key})}catch(e){toast('⏰ '+msg+item.name)}}
+   else{toast('⏰ '+msg+item.name);try{if(navigator.vibrate)navigator.vibrate([180,100,180])}catch(e){}}
+  }
+ }));
+}
+setInterval(checkAlarms,15000);
+function renderQuit(){
+ $('quitDate').value=quitDate;
+ if(!quitDate){$('quitDays').textContent='Hari ke-0';$('quitSub').textContent='Mulai perjalanan bebas rokokmu hari ini.';$('quitProgress').style.width='0%';return}
+ const start=new Date(quitDate+'T00:00:00');const diff=Math.max(0,Math.floor((new Date(dateKey+'T00:00:00')-start)/86400000));
+ $('quitDays').textContent='Hari ke-'+(diff+1);$('quitSub').textContent=diff===0?'Hari pertama — satu langkah pada satu waktu.':diff+' hari sudah kamu lewati sejak tanggal mulai.';
+ $('quitProgress').style.width=Math.min(100,((diff+1)%7)/7*100)+'%';
+}
+$('saveQuit').onclick=()=>{quitDate=$('quitDate').value;if(!quitDate){toast('Pilih tanggal mulai terlebih dahulu.');return}if(quitDate>dateKey){toast('Tanggal tidak boleh di masa depan.');return}save('quitDate',quitDate);renderQuit();toast('Tanggal perjalanan disimpan. Kamu bisa mulai lagi kapan pun.');};
+const tips=['💡 Saat keinginan muncul, coba tunda 5 menit, minum air, tarik napas perlahan, atau berjalan sebentar. Keinginan biasanya datang dan pergi.','💡 Coba kenali pemicu seperti stres atau ajakan teman. Siapkan pengganti yang sehat, misalnya permen tanpa gula atau mengobrol dengan orang yang mendukungmu.','💡 Jika terasa sulit, minta dukungan keluarga, orang tepercaya, atau tenaga kesehatan. Berhenti merokok adalah proses; satu hari pada satu waktu.'];
+$('cravingBtn').onclick=()=>{breathSeconds=120;$('cravingModal').classList.add('show');updateBreath();clearInterval(breathInterval);breathInterval=setInterval(()=>{breathSeconds--;updateBreath();if(breathSeconds<=0){clearInterval(breathInterval);toast('Selesai! Bagus sudah memberi dirimu jeda.');}},1000);$('cravingTip').textContent=tips[Math.floor(Math.random()*tips.length)];};
+function updateBreath(){const m=Math.floor(Math.max(0,breathSeconds)/60),s=Math.max(0,breathSeconds)%60;$('breathRing').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');$('breathHint').textContent=breathSeconds%8<4?'Tarik napas perlahan…':'Hembuskan perlahan…';}
+$('closeCraving').onclick=()=>{$('cravingModal').classList.remove('show');clearInterval(breathInterval)};
+$('restartBreath').onclick=()=>{breathSeconds=120;updateBreath()};
+$('cravingModal').addEventListener('click',e=>{if(e.target===$('cravingModal'))$('closeCraving').click()});
+function renderScreen(){
+ const limit=screenLimit*60, used=screenUsage.seconds||0,remain=Math.max(0,limit-used);
+ $('screenRemaining').textContent=remain>=3600?Math.floor(remain/3600)+' jam '+Math.floor(remain%3600/60)+' mnt':Math.ceil(remain/60)+' menit tersisa';
+ $('screenUsed').textContent='Tercatat hari ini: '+Math.floor(used/3600)+' jam '+Math.floor(used%3600/60)+' menit.';
+ $('screenProgress').style.width=Math.min(100,used/limit*100)+'%';$('screenLimit').value=String(screenLimit);$('statScreen').textContent=(screenLimit/60)+' jam';
+}
+$('saveScreenLimit').onclick=()=>{screenLimit=Number($('screenLimit').value);save('screenLimit',screenLimit);renderScreen();toast('Batas waktu layar diperbarui.');};
+function stopSession(){clearInterval(sessionInterval);sessionInterval=null;sessionEnd=0;$('startScreenTimer').textContent='▶ Mulai timer';}
+$('startScreenTimer').onclick=()=>{
+ if(sessionInterval){stopSession();$('screenTimerStatus').textContent='Timer sesi dihentikan. Waktu yang sudah tercatat tetap tersimpan.';toast('Timer dihentikan.');return}
+ const mins=Number($('sessionLength').value);sessionEnd=Date.now()+mins*60000;$('startScreenTimer').textContent='■ Hentikan timer';$('screenTimerStatus').textContent='Sesi aktif selama '+mins+' menit. Cobalah fokus dan berhenti saat timer selesai.';
+ sessionInterval=setInterval(()=>{
+  if(document.visibilityState==='visible'){screenUsage.seconds=(screenUsage.seconds||0)+1;save('screenUsage_'+dateKey,screenUsage)}
+  const remain=Math.max(0,Math.ceil((sessionEnd-Date.now())/1000));$('screenTimerStatus').textContent='Timer sesi: '+Math.floor(remain/60)+' menit '+remain%60+' detik tersisa.';
+  renderScreen();
+  if(remain<=0){stopSession();$('screenTimerStatus').textContent='Waktu sesi selesai. Letakkan HP dan lakukan aktivitas lain sejenak.';toast('⏳ Waktu bermain HP selesai!');if('Notification'in window&&Notification.permission==='granted'){try{new Notification('SehatYuk',{body:'Waktu sesi HP selesai. Saatnya istirahat dari layar.'})}catch(e){}}}
+ },1000);
+};
+function renderHabits(){
+ $('habitList').innerHTML='';habits.forEach((done,i)=>{const row=document.createElement('div');row.className='habit-row';row.innerHTML=`<input type="checkbox" id="habit${i}" ${done?'checked':''}><label for="habit${i}">${habitNames[i]}</label><small>${done?'Selesai':'Belum'}</small>`;row.querySelector('input').onchange=e=>{habits[i]=e.target.checked;save('habits_'+dateKey,habits);renderHabits()};$('habitList').appendChild(row)});
+ const n=habits.filter(Boolean).length;$('habitProgress').style.width=n/5*100+'%';$('habitCount').textContent=n+' dari 5 kebiasaan selesai';
+}
+$('saveNote').onclick=()=>{save('note_'+dateKey,$('dailyNote').value);toast('Catatan tersimpan.');};
+$('dailyNote').value=load('note_'+dateKey,'');
+renderSchedules();renderQuit();renderScreen();renderHabits();
+})();
+</script>
+</body>
+</html>
